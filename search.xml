@@ -4,6 +4,7 @@
     <title>Linux命令</title>
     <url>/2021/09/08/Linux%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p>(后续会继续更新)</p>
+<span id="more"></span>
 <h2 id="find-基本语法参数"><a href="#find-基本语法参数" class="headerlink" title="find 基本语法参数"></a>find 基本语法参数</h2><p>1.与时间有关的参数</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；</span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；</span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；</span><br><span class="line">-newer file : 列出比file还要新的文件名 </span><br></pre></td></tr></table></figure>
 <hr>
@@ -39,6 +40,7 @@
     <title>网络层次的划分</title>
     <url>/2021/09/04/hello-world/</url>
     <content><![CDATA[<h1 id="OSI七层参考模型模型"><a href="#OSI七层参考模型模型" class="headerlink" title="OSI七层参考模型模型"></a>OSI七层参考模型模型</h1><p>为了使用不同的计算机厂家生产的计算机能够相互通信，以便在更大的范围内建立计算机网络，国际标准化组织在1978年提出了”开放系统互联参考模型“，著名的OSI/RM模型(Open System Interconnection/Reference Model)</p>
+<span id="more"></span>
 <hr>
 <h3 id="物理层（Physics-Layer）"><a href="#物理层（Physics-Layer）" class="headerlink" title="物理层（Physics Layer）"></a>物理层（Physics Layer）</h3><p> 激活，维持，关闭，通信端点之间的机械特性，电气特性，功能特性以及过程特性。该层为上层协议提供了一个传输数据的可靠物理媒体。简单的来说，物理层确保元素的数据可在各种物理媒体上传输。物理层记住两个重要设备的名称，中继器（Repeater，也叫放大器）和集线器</p>
 <p>More info: <a href="https://baike.baidu.com/item/%E7%89%A9%E7%90%86%E5%B1%82/4329158?fr=aladdin">物理层</a></p>

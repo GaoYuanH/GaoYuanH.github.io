@@ -1,22 +1,345 @@
-{% extends '_layout.swig' %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="6fea7fc7276fc383ec5b2080c662f076"/>
+  <!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  -->
+  
+  <title>Linux命令 | DA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(后续会继续更新)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令">
+<meta property="og:url" content="http://example.com/2021/09/08/Linux%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="DA">
+<meta property="og:description" content="(后续会继续更新)">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-08T12:38:56.581Z">
+<meta property="article:modified_time" content="2021-09-08T14:35:15.357Z">
+<meta property="article:author" content="gyh">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-{% block pageCss %}
-    {{ css('scss/views/page/post') }}
-{% endblock %}
+  <script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-1.8.1.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/ug-theme-default.js"></script>
+  <script src="/js/unitegallery.js"></script>
+  <script src="/js/av.min.js"></script>
+  <script src="/js/valine.min.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-{% block header %}
-    {% include './_partial/common/small-header.swig' %}
-{% endblock %}
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="" class="js-avatar">
+		</a>
 
-{% block main %}
-    {% include './_partial/post/main.swig' %}
-{% endblock %}
+		<hgroup>
+		  <h1 class="header-author"><a href="/" class="alluraregular"></a></h1>
+		</hgroup>
+        <!--
+		
+        -->
+		
 
-{% block pagejs %}
-    {{ js('js/page/post.js') }}
-{% endblock %}
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
 
-{% block other %}
-    {% include './_partial/common/comment.swig' %}
+				
+
+				
+
+				
+			</div>
+		</div>
+	</header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="" class="js-avatar">
+				<hgroup>
+				  <h1 class="header-author"></h1>
+				</hgroup>
+			</div>
+			
+			<nav class="header-menu">
+				<ul>
+				
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>
+	</div>
+</nav>
+
+	  <div class="page-header" style="">
+	<!--是否开启站内搜索-->
+	
+	<!--是否开启最近通知-->
+	
+</div>
+
+      <div class="body-wrap"><article id="post-Linux命令" class="article article-type-post" itemscope itemprop="blogPost">
+    <script>
+        $("html").niceScroll({
+            cursorcolor: "#2a2929",
+            cursoropacitymax: 1,
+            touchbehavior: false,
+            cursorwidth: "6px",
+            cursorborder: "5",
+            cursorborderradius: "0px",
+            autohidemode: true
+        });
+    </script>
     
-{% endblock %}
+    <div class="article-meta">
+        <a href="/2021/09/08/Linux%E5%91%BD%E4%BB%A4/" class="article-date">
+  	<time datetime="2021-09-08T12:38:56.581Z" itemprop="datePublished">2021-09-08</time>
+</a>
+
+    </div>
+    
+    <div class="article-inner">
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      Linux命令
+    </h1>
+  
+
+
+        </header>
+        
+        <div class="article-info article-info-post">
+            
+
+            
+
+            <div class="clearfix"></div>
+        </div>
+        
+        
+
+        <div class="article-entry" itemprop="articleBody">
+
+            
+
+            <p class="toc-button" id="toc-button">目录</p>
+<div id="toc" class="toc-article" style="display:none;">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#find-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%82%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">find 基本语法参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ls-%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">ls 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cd-%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">cd 命令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cp-%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">cp 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rm%E5%91%BD%E4%BB%A4%E4%BD%9C%E7%94%A8%E4%B8%BA%E5%88%A0%E9%99%A4"><span class="toc-number">5.</span> <span class="toc-text">rm命令作用为删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mv%E5%91%BD%E4%BB%A4%E4%BD%9C%E7%94%A8%E4%B8%BA%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">mv命令作用为移动文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pwd%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BD%9C%E7%94%A8%E4%B8%BA%E6%9F%A5%E7%9C%8B%E2%80%9D%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E2%80%9C%E7%9A%84%E5%AE%8C%E6%95%B4%E8%B7%AF%E5%BE%84"><span class="toc-number">7.</span> <span class="toc-text">pwd命令，作用为查看”当前工作目录“的完整路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tar%E5%91%BD%E4%BB%A4%EF%BC%8C%E7%94%A8%E4%BA%8E%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B"><span class="toc-number">8.</span> <span class="toc-text">tar命令，用于压缩解压</span></a></li></ol>
+</div>
+<script>
+    $(function(){
+
+        var width = document.body.scrollWidth;
+        if (width <=550) {
+             $(".toc-button").css("display","none");
+        }
+        $(".toc-button").hover(function(){
+            var top = $(this).get(0).offsetTop-$(".toc-article").height()/2;
+            $(".toc-article").css({
+                top:top +"px"
+            });
+            $("#toc").show(1000,function(){});
+           // $("#toc").animate({width:500;},3000);
+        },function(){
+
+        });
+        $(".toc-article").hover(function(){
+
+        },function(){
+            $("#toc").hide(1000,function(){});
+        });
+    })
+</script>
+
+            
+            
+
+            
+            <p>(后续会继续更新)</p>
+<span id="more"></span>
+<h2 id="find-基本语法参数"><a href="#find-基本语法参数" class="headerlink" title="find 基本语法参数"></a>find 基本语法参数</h2><p>1.与时间有关的参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；</span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；</span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；</span><br><span class="line">-newer file : 列出比file还要新的文件名 </span><br></pre></td></tr></table></figure>
+<hr>
+<p>2.与用户或用户组名有关的参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-user name : 列出文件所有者为name的文件</span><br><span class="line">-group name : 列出文件所属用户组为name的文件</span><br><span class="line">-uid n : 列出文件所有者为用户ID为n的文件</span><br><span class="line">-gid n : 列出文件所属用户组为用户组ID为n的文件</span><br></pre></td></tr></table></figure>
+<hr>
+<p>3.与文件权限及名称有关的参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-name filename ：找出文件名为filename的文件</span><br><span class="line">-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件</span><br><span class="line">-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、</span><br><span class="line">             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；</span><br><span class="line">-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；</span><br><span class="line">-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示</span><br><span class="line">-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">-a ：全部的档案，连同隐藏档( 开头为 . 的档案) 一起列出来～ </span><br><span class="line">-A ：全部的档案，连同隐藏档，但不包括 . 与 .. 这两个目录，一起列出来～ </span><br><span class="line">-d ：仅列出目录本身，而不是列出目录内的档案数据 </span><br><span class="line">-f ：直接列出结果，而不进行排序 (ls 预设会以档名排序！) </span><br><span class="line">-F ：根据档案、目录等信息，给予附加数据结构，例如： </span><br><span class="line">*：代表可执行档； /：代表目录； =：代表 socket 档案； |：代表 FIFO 档案； </span><br><span class="line">-h ：将档案容量以人类较易读的方式(例如 GB, KB 等等)列出来； </span><br><span class="line">-i ：列出 inode 位置，而非列出档案属性； </span><br><span class="line">-l ：长数据串行出，包含档案的属性等等数据； </span><br><span class="line">-n ：列出 UID 与 GID 而非使用者与群组的名称 (UID与GID会在账号管理提到！) </span><br><span class="line">-r ：将排序结果反向输出，例如：原本档名由小到大，反向则为由大到小； </span><br><span class="line">-R ：连同子目录内容一起列出来； </span><br><span class="line">-S ：以档案容量大小排序！ </span><br><span class="line">-t ：依时间排序 </span><br><span class="line">--color=never ：不要依据档案特性给予颜色显示； </span><br><span class="line">--color=always ：显示颜色 </span><br><span class="line">--color=auto ：让系统自行依据设定来判断是否给予颜色 </span><br><span class="line">--full-time ：以完整时间模式 (包含年、月、日、时、分) 输出 </span><br><span class="line">--time=&#123;atime,ctime&#125; ：输出 access 时间或 改变权限属性时间 (ctime) </span><br><span class="line">而非内容变更时间 (modification time)  </span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="cd-命令："><a href="#cd-命令：" class="headerlink" title="cd 命令："></a>cd 命令：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Docements # 切换到目录/root/Docements</span><br><span class="line">cd ./path          # 切换到当前目录下的path目录中，“.”表示当前目录  </span><br><span class="line">cd ../path         # 切换到上层目录中的path目录中，“..”表示上一层目录</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="cp-命令"><a href="#cp-命令" class="headerlink" title="cp 命令"></a>cp 命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a ：将文件的特性一起复制</span><br><span class="line">-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份</span><br><span class="line">-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行</span><br><span class="line">-r ：递归持续复制，用于目录的复制行为</span><br><span class="line">-u ：目标文件与源文件有差异时才会复制</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="rm命令作用为删除"><a href="#rm命令作用为删除" class="headerlink" title="rm命令作用为删除"></a>rm命令作用为删除</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f ：就是force的意思，忽略不存在的文件，不会出现警告消息</span><br><span class="line">-i ：互动模式，在删除前会询问用户是否操作</span><br><span class="line">-r ：递归删除，最常用于目录删除，它是一个非常危险的参数</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="mv命令作用为移动文件"><a href="#mv命令作用为移动文件" class="headerlink" title="mv命令作用为移动文件"></a>mv命令作用为移动文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖</span><br><span class="line">-i ：若目标文件已经存在，就会询问是否覆盖</span><br><span class="line">-u ：若目标文件已经存在，且比目标文件新，才会更新</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="pwd命令，作用为查看”当前工作目录“的完整路径"><a href="#pwd命令，作用为查看”当前工作目录“的完整路径" class="headerlink" title="pwd命令，作用为查看”当前工作目录“的完整路径"></a>pwd命令，作用为查看”当前工作目录“的完整路径</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd -P # 显示出实际路径，而非使用连接（link）路径；pwd显示的是连接路径</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="tar命令，用于压缩解压"><a href="#tar命令，用于压缩解压" class="headerlink" title="tar命令，用于压缩解压"></a>tar命令，用于压缩解压</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-c ：新建打包文件</span><br><span class="line">-t ：查看打包文件的内容含有哪些文件名</span><br><span class="line">-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中</span><br><span class="line">-j ：通过bzip2的支持进行压缩/解压缩</span><br><span class="line">-z ：通过gzip的支持进行压缩/解压缩</span><br><span class="line">-v ：在压缩/解压缩过程中，将正在处理的文件名显示出来</span><br><span class="line">-f filename ：filename为要处理的文件</span><br><span class="line">-C dir ：指定压缩/解压缩的目录dir</span><br></pre></td></tr></table></figure>
+<hr>
+
+            
+            </br>
+            <p>本文链接：
+                <a href="http://example.com/2021/09/08/Linux%E5%91%BD%E4%BB%A4/">
+                    http://example.com/2021/09/08/Linux%E5%91%BD%E4%BB%A4/
+                </a>
+            </p>
+            
+            <p>-- <acronym title="End of File">EOF</acronym> --</p>
+
+            <div class="post-info">
+
+                <p>转载请注明出处 署名-非商业性使用-禁止演绎 3.0 国际（CC BY-NC-ND 3.0）</p>
+            </div>
+            
+        </div>
+
+        
+    </div>
+    
+    
+    
+        
+<nav id="article-nav">
+  
+  
+    <a href="/2021/09/06/gaoyuanh/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gyh</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+        
+    
+
+</article>
+
+
+<script>
+    var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() ||
+                isMobile.Windows());
+        }
+    };
+    if (isMobile.any()) {
+        //移动端不显示目录和评论
+        $("#toc-button").css("display", "none");
+        $("#commentDiv").css("display", "none");
+    }
+</script>
+</div>
+      <!--
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2021 gyh
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/kiritor/hexo-theme-yilia-l" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  <script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','m5RW4BUQrJ_r-CYKAksH','2.0.0');
+</script>
+  </div>
+</footer>
+-->
+    </div>
+    
+
+
+<script src="/js/mobile.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+<script src="/js/prefixfree.js"></script>
+
+
+
+
+
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;z-index:9999;opacity: 100%;">
+    <a title="返回顶部" style="opacity: 100%;">
+        <img src="/img/scrollup.png" />
+    </a>
+</div>
+
+<script src="/js/totop.js"></script>
+<script src="/js/share.js"></script>
+
+  </div>
+</body>
+</html>
