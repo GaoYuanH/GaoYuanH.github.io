@@ -1,12 +1,9 @@
-extends partial/layout
+{% extends '_layout.swig' %}
 
-block container
-    include mixins/post
-    +posts()
+{% block pageCss %}
+    {{ css('scss/views/page/index') }}
+{% endblock %}
 
-block pagination
-    include mixins/paginator
-    +home()
-
-block copyright
-    include partial/copyright
+{% block main %}
+    {% include './_partial/index/main.swig' %}
+{% endblock %}

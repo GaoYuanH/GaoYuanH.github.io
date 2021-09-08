@@ -1,12 +1,13 @@
-extends partial/layout
+{% extends '_layout.swig' %}
 
-block container
-    include mixins/post
-    +postList()
-    
-block pagination
-    include mixins/paginator
-    +home()
+{% block pageCss %}
+    {{ css('scss/views/page/archive') }}
+{% endblock %}
 
-block copyright
-    include partial/copyright
+{% block header %}
+    {% include './_partial/common/small-header.swig' %}
+{% endblock %}
+
+{% block main %}
+    {% include './_partial/archive/main.swig' %}
+{% endblock %}

@@ -1,21 +1,22 @@
-extends partial/layout
+{% extends '_layout.swig' %}
 
-block site_title
-    != page.title + " · " + config.title
+{% block pageCss %}
+    {{ css('scss/views/page/post') }}
+{% endblock %}
 
-block description
-    - var desc = page.desc || page.title + ' - ' + config.author;
-    meta(name="description", content=desc)
+{% block header %}
+    {% include './_partial/common/small-header.swig' %}
+{% endblock %}
 
-block container
-    include mixins/post
-    +post(page)
+{% block main %}
+    {% include './_partial/post/main.swig' %}
+{% endblock %}
 
-block pagination
-    include mixins/paginator
-    +post()
-    include partial/comment
+{% block pagejs %}
+    {{ js('js/page/post.js') }}
+{% endblock %}
 
-block copyright
-    include partial/copyright
-
+{% block other %}
+    {% include './_partial/common/comment.swig' %}
+    
+{% endblock %}
