@@ -1,46 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Linux命令</title>
-      <link href="/2021/09/08/Linux%E5%91%BD%E4%BB%A4/"/>
-      <url>/2021/09/08/Linux%E5%91%BD%E4%BB%A4/</url>
-      
-        <content type="html"><![CDATA[<p>(后续会继续更新)</p><span id="more"></span><h2 id="find-基本语法参数"><a href="#find-基本语法参数" class="headerlink" title="find 基本语法参数"></a>find 基本语法参数</h2><p>1.与时间有关的参数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；</span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；</span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；</span><br><span class="line">-newer file : 列出比file还要新的文件名 </span><br></pre></td></tr></table></figure><hr><p>2.与用户或用户组名有关的参数：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-user name : 列出文件所有者为name的文件</span><br><span class="line">-group name : 列出文件所属用户组为name的文件</span><br><span class="line">-uid n : 列出文件所有者为用户ID为n的文件</span><br><span class="line">-gid n : 列出文件所属用户组为用户组ID为n的文件</span><br></pre></td></tr></table></figure><hr><p>3.与文件权限及名称有关的参数：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-name filename ：找出文件名为filename的文件</span><br><span class="line">-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件</span><br><span class="line">-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、</span><br><span class="line">             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；</span><br><span class="line">-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；</span><br><span class="line">-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示</span><br><span class="line">-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</span><br></pre></td></tr></table></figure><hr><h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">-a ：全部的档案，连同隐藏档( 开头为 . 的档案) 一起列出来～ </span><br><span class="line">-A ：全部的档案，连同隐藏档，但不包括 . 与 .. 这两个目录，一起列出来～ </span><br><span class="line">-d ：仅列出目录本身，而不是列出目录内的档案数据 </span><br><span class="line">-f ：直接列出结果，而不进行排序 (ls 预设会以档名排序！) </span><br><span class="line">-F ：根据档案、目录等信息，给予附加数据结构，例如： </span><br><span class="line">*：代表可执行档； /：代表目录； =：代表 socket 档案； |：代表 FIFO 档案； </span><br><span class="line">-h ：将档案容量以人类较易读的方式(例如 GB, KB 等等)列出来； </span><br><span class="line">-i ：列出 inode 位置，而非列出档案属性； </span><br><span class="line">-l ：长数据串行出，包含档案的属性等等数据； </span><br><span class="line">-n ：列出 UID 与 GID 而非使用者与群组的名称 (UID与GID会在账号管理提到！) </span><br><span class="line">-r ：将排序结果反向输出，例如：原本档名由小到大，反向则为由大到小； </span><br><span class="line">-R ：连同子目录内容一起列出来； </span><br><span class="line">-S ：以档案容量大小排序！ </span><br><span class="line">-t ：依时间排序 </span><br><span class="line">--color=never ：不要依据档案特性给予颜色显示； </span><br><span class="line">--color=always ：显示颜色 </span><br><span class="line">--color=auto ：让系统自行依据设定来判断是否给予颜色 </span><br><span class="line">--full-time ：以完整时间模式 (包含年、月、日、时、分) 输出 </span><br><span class="line">--time=&#123;atime,ctime&#125; ：输出 access 时间或 改变权限属性时间 (ctime) </span><br><span class="line">而非内容变更时间 (modification time)  </span><br></pre></td></tr></table></figure><hr><h2 id="cd-命令："><a href="#cd-命令：" class="headerlink" title="cd 命令："></a>cd 命令：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root/Docements # 切换到目录/root/Docements</span><br><span class="line">cd ./path          # 切换到当前目录下的path目录中，“.”表示当前目录  </span><br><span class="line">cd ../path         # 切换到上层目录中的path目录中，“..”表示上一层目录</span><br></pre></td></tr></table></figure><hr><h2 id="cp-命令"><a href="#cp-命令" class="headerlink" title="cp 命令"></a>cp 命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-a ：将文件的特性一起复制</span><br><span class="line">-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份</span><br><span class="line">-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行</span><br><span class="line">-r ：递归持续复制，用于目录的复制行为</span><br><span class="line">-u ：目标文件与源文件有差异时才会复制</span><br></pre></td></tr></table></figure><hr><h2 id="rm命令作用为删除"><a href="#rm命令作用为删除" class="headerlink" title="rm命令作用为删除"></a>rm命令作用为删除</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f ：就是force的意思，忽略不存在的文件，不会出现警告消息</span><br><span class="line">-i ：互动模式，在删除前会询问用户是否操作</span><br><span class="line">-r ：递归删除，最常用于目录删除，它是一个非常危险的参数</span><br></pre></td></tr></table></figure><hr><h2 id="mv命令作用为移动文件"><a href="#mv命令作用为移动文件" class="headerlink" title="mv命令作用为移动文件"></a>mv命令作用为移动文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖</span><br><span class="line">-i ：若目标文件已经存在，就会询问是否覆盖</span><br><span class="line">-u ：若目标文件已经存在，且比目标文件新，才会更新</span><br></pre></td></tr></table></figure><hr><h2 id="pwd命令，作用为查看”当前工作目录“的完整路径"><a href="#pwd命令，作用为查看”当前工作目录“的完整路径" class="headerlink" title="pwd命令，作用为查看”当前工作目录“的完整路径"></a>pwd命令，作用为查看”当前工作目录“的完整路径</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd -P # 显示出实际路径，而非使用连接（link）路径；pwd显示的是连接路径</span><br></pre></td></tr></table></figure><hr><h2 id="tar命令，用于压缩解压"><a href="#tar命令，用于压缩解压" class="headerlink" title="tar命令，用于压缩解压"></a>tar命令，用于压缩解压</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-c ：新建打包文件</span><br><span class="line">-t ：查看打包文件的内容含有哪些文件名</span><br><span class="line">-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中</span><br><span class="line">-j ：通过bzip2的支持进行压缩/解压缩</span><br><span class="line">-z ：通过gzip的支持进行压缩/解压缩</span><br><span class="line">-v ：在压缩/解压缩过程中，将正在处理的文件名显示出来</span><br><span class="line">-f filename ：filename为要处理的文件</span><br><span class="line">-C dir ：指定压缩/解压缩的目录dir</span><br></pre></td></tr></table></figure><hr>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>gyh</title>
-      <link href="/2021/09/06/gaoyuanh/"/>
-      <url>/2021/09/06/gaoyuanh/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>网络层次的划分</title>
-      <link href="/2021/09/04/hello-world/"/>
-      <url>/2021/09/04/hello-world/</url>
-      
-        <content type="html"><![CDATA[<h1 id="OSI七层参考模型模型"><a href="#OSI七层参考模型模型" class="headerlink" title="OSI七层参考模型模型"></a>OSI七层参考模型模型</h1><p>为了使用不同的计算机厂家生产的计算机能够相互通信，以便在更大的范围内建立计算机网络，国际标准化组织在1978年提出了”开放系统互联参考模型“，著名的OSI/RM模型(Open System Interconnection/Reference Model)</p><span id="more"></span><hr><h3 id="物理层（Physics-Layer）"><a href="#物理层（Physics-Layer）" class="headerlink" title="物理层（Physics Layer）"></a>物理层（Physics Layer）</h3><p> 激活，维持，关闭，通信端点之间的机械特性，电气特性，功能特性以及过程特性。该层为上层协议提供了一个传输数据的可靠物理媒体。简单的来说，物理层确保元素的数据可在各种物理媒体上传输。物理层记住两个重要设备的名称，中继器（Repeater，也叫放大器）和集线器</p><p>More info: <a href="https://baike.baidu.com/item/%E7%89%A9%E7%90%86%E5%B1%82/4329158?fr=aladdin">物理层</a></p><hr><h3 id="数据链路层（Data-Link-Layer）"><a href="#数据链路层（Data-Link-Layer）" class="headerlink" title="数据链路层（Data Link Layer）"></a>数据链路层（Data Link Layer）</h3><p>数据链路层在物理层提供的服务的基础上向网络层提供服务，其中最基本的服务是将源自网络层来的数<br>据可靠地传输到相邻节点的目标网络层。为达到这一目的，数据链路必须具备一系列相应的功能，主要有：如何将数据组合成数据块，在数据链路层中称这种数据块为帧（frame）,帧是数据链路层的传送<br>单位；如何控制帧在物理信道上的传输，包括如何传输差错，如何调节发送频率以使与接受方相匹配；以及在两个网络实体之间提供数据链路通路的建立，维持和释放的管理。数据链路层在不可靠的物理介质上提供可靠的传输。该层的作用包括：物理地址寻找，数据的成帧，流量控制，数据的检错，重发等。</p><p>More info: <a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82">数据链路层</a></p><hr><h3 id="网络层（Network-Layer）"><a href="#网络层（Network-Layer）" class="headerlink" title="网络层（Network Layer）"></a>网络层（Network Layer）</h3><p>网络层的目的是实现两个端系统之间的数据透明传送，具体功能包括寻址和路由选择，连接的建立，保持和终止等。他提供的服务使传输层不需要了解网络中的数据传输和交换技术。如果您想用尽量少的词来记住网络层，那就是“路径选择，路由及逻辑寻址”。<br>网络层中涉及众多的协议，其中包括最重要的协议，也就是TCP/IP的协议–IP协议。IP协议非常简单，仅仅提供不可靠，无连接的传送服务。IP协议的主要功能有：无连接数据包传输，数据包路由选择和差错控制。与IP协议配套使用现实其功能的还有地址解析协议ARP，逆地址解析协议RARP，因特网报文协议ICMP。</p><p>More info: <a href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%B1%82/16523988">网络层</a></p><hr><h3 id="传输层（Transport-Layer）"><a href="#传输层（Transport-Layer）" class="headerlink" title="传输层（Transport Layer）"></a>传输层（Transport Layer）</h3><p>第一个端到端，即主机到主机的层次。传输层负责将上层数据分段并提供端到端的，可靠的或不可靠的传输。此外，传输层还要处理端到端的差错控制和流量控制问题。<br>传输层的任务是根据通信子网的特性，最佳的利用网络资源，为两个端系统的会话层之间，提供建立，维护和取消传输连接的功能，负责端到端的可靠数据传输。在这一层，信息传送的协议数据单元称为段或报文。<br>网络层只是根据网络地址将源结点发出的数据包传送到目的结点，而传输层则负责将数据可靠的传送到相应的端口。</p><p>More info: <a href="https://baike.baidu.com/item/%E4%BC%A0%E8%BE%93%E5%B1%82/4329536?fr=aladdin">传输层</a></p><hr><h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><p> 会话层管理主机之间的会话进程，即负责建立，管理，终止进程之间的会话。会话层还利用在数据中插入校验点来实现数据的同步。</p><p>More info: <a href="https://baike.baidu.com/item/%E4%BC%9A%E8%AF%9D%E5%B1%82">会话层</a></p><hr><h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><p> 表示层对上层数据或信息进行交换以保证一个主机应用层信息可以被另一个主机的应用程序理解。表示层的数据转换包括数据的加密，压缩，格式转换等。</p><p>More info: <a href="https://baike.baidu.com/item/%E8%A1%A8%E7%A4%BA%E5%B1%82">表示层</a></p><hr><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>为操作系统或网络应用程序提供访问服务的接口</p><p>More info: <a href="https://baike.baidu.com/item/%E5%BA%94%E7%94%A8%E5%B1%82/16412033">应用层</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>Linux命令</title>
+    <url>/2021/09/08/Linux%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>(后续会继续更新)</p>
+<span id="more"></span>
+<h2 id="find-基本语法参数"><a href="#find-基本语法参数" class="headerlink" title="find 基本语法参数"></a>find 基本语法参数</h2><p>1.与时间有关的参数</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；</span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；</span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；</span><br><span class="line">-newer file : 列出比file还要新的文件名 </span><br></pre></td></tr></table></figure>
+<hr>
+<p>2.与用户或用户组名有关的参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-user name : 列出文件所有者为name的文件</span><br><span class="line">-group name : 列出文件所属用户组为name的文件</span><br><span class="line">-uid n : 列出文件所有者为用户ID为n的文件</span><br><span class="line">-gid n : 列出文件所属用户组为用户组ID为n的文件</span><br></pre></td></tr></table></figure>
+<hr>
+<p>3.与文件权限及名称有关的参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-name filename ：找出文件名为filename的文件</span><br><span class="line">-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件</span><br><span class="line">-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、</span><br><span class="line">             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；</span><br><span class="line">-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；</span><br><span class="line">-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示</span><br><span class="line">-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-a ：全部的档案，连同隐藏档( 开头为 . 的档案) 一起列出来～ </span><br><span class="line">-A ：全部的档案，连同隐藏档，但不包括 . 与 .. 这两个目录，一起列出来～ </span><br><span class="line">-d ：仅列出目录本身，而不是列出目录内的档案数据 </span><br><span class="line">-f ：直接列出结果，而不进行排序 (ls 预设会以档名排序！) </span><br><span class="line">-F ：根据档案、目录等信息，给予附加数据结构，例如： </span><br><span class="line">*：代表可执行档； /：代表目录； =：代表 socket 档案； |：代表 FIFO 档案； </span><br><span class="line">-h ：将档案容量以人类较易读的方式(例如 GB, KB 等等)列出来； </span><br><span class="line">-i ：列出 inode 位置，而非列出档案属性； </span><br><span class="line">-l ：长数据串行出，包含档案的属性等等数据； </span><br><span class="line">-n ：列出 UID 与 GID 而非使用者与群组的名称 (UID与GID会在账号管理提到！) </span><br><span class="line">-r ：将排序结果反向输出，例如：原本档名由小到大，反向则为由大到小； </span><br><span class="line">-R ：连同子目录内容一起列出来； </span><br><span class="line">-S ：以档案容量大小排序！ </span><br><span class="line">-t ：依时间排序 </span><br><span class="line">--color=never ：不要依据档案特性给予颜色显示； </span><br><span class="line">--color=always ：显示颜色 </span><br><span class="line">--color=auto ：让系统自行依据设定来判断是否给予颜色 </span><br><span class="line">--full-time ：以完整时间模式 (包含年、月、日、时、分) 输出 </span><br><span class="line">--time=&#123;atime,ctime&#125; ：输出 access 时间或 改变权限属性时间 (ctime) </span><br><span class="line">而非内容变更时间 (modification time)  </span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="cd-命令："><a href="#cd-命令：" class="headerlink" title="cd 命令："></a>cd 命令：</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /root/Docements # 切换到目录/root/Docements</span><br><span class="line">cd ./path          # 切换到当前目录下的path目录中，“.”表示当前目录  </span><br><span class="line">cd ../path         # 切换到上层目录中的path目录中，“..”表示上一层目录</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="cp-命令"><a href="#cp-命令" class="headerlink" title="cp 命令"></a>cp 命令</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-a ：将文件的特性一起复制</span><br><span class="line">-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份</span><br><span class="line">-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行</span><br><span class="line">-r ：递归持续复制，用于目录的复制行为</span><br><span class="line">-u ：目标文件与源文件有差异时才会复制</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="rm命令作用为删除"><a href="#rm命令作用为删除" class="headerlink" title="rm命令作用为删除"></a>rm命令作用为删除</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-f ：就是force的意思，忽略不存在的文件，不会出现警告消息</span><br><span class="line">-i ：互动模式，在删除前会询问用户是否操作</span><br><span class="line">-r ：递归删除，最常用于目录删除，它是一个非常危险的参数</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="mv命令作用为移动文件"><a href="#mv命令作用为移动文件" class="headerlink" title="mv命令作用为移动文件"></a>mv命令作用为移动文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖</span><br><span class="line">-i ：若目标文件已经存在，就会询问是否覆盖</span><br><span class="line">-u ：若目标文件已经存在，且比目标文件新，才会更新</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="pwd命令，作用为查看”当前工作目录“的完整路径"><a href="#pwd命令，作用为查看”当前工作目录“的完整路径" class="headerlink" title="pwd命令，作用为查看”当前工作目录“的完整路径"></a>pwd命令，作用为查看”当前工作目录“的完整路径</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pwd -P # 显示出实际路径，而非使用连接（link）路径；pwd显示的是连接路径</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="tar命令，用于压缩解压"><a href="#tar命令，用于压缩解压" class="headerlink" title="tar命令，用于压缩解压"></a>tar命令，用于压缩解压</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-c ：新建打包文件</span><br><span class="line">-t ：查看打包文件的内容含有哪些文件名</span><br><span class="line">-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中</span><br><span class="line">-j ：通过bzip2的支持进行压缩/解压缩</span><br><span class="line">-z ：通过gzip的支持进行压缩/解压缩</span><br><span class="line">-v ：在压缩/解压缩过程中，将正在处理的文件名显示出来</span><br><span class="line">-f filename ：filename为要处理的文件</span><br><span class="line">-C dir ：指定压缩/解压缩的目录dir</span><br></pre></td></tr></table></figure>
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title>gyh</title>
+    <url>/2021/09/06/gaoyuanh/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>网络层次的划分</title>
+    <url>/2021/09/04/hello-world/</url>
+    <content><![CDATA[<h1 id="OSI七层参考模型模型"><a href="#OSI七层参考模型模型" class="headerlink" title="OSI七层参考模型模型"></a>OSI七层参考模型模型</h1><p>为了使用不同的计算机厂家生产的计算机能够相互通信，以便在更大的范围内建立计算机网络，国际标准化组织在1978年提出了”开放系统互联参考模型“，著名的OSI/RM模型(Open System Interconnection/Reference Model)</p>
+<span id="more"></span>
+<hr>
+<h3 id="物理层（Physics-Layer）"><a href="#物理层（Physics-Layer）" class="headerlink" title="物理层（Physics Layer）"></a>物理层（Physics Layer）</h3><p> 激活，维持，关闭，通信端点之间的机械特性，电气特性，功能特性以及过程特性。该层为上层协议提供了一个传输数据的可靠物理媒体。简单的来说，物理层确保元素的数据可在各种物理媒体上传输。物理层记住两个重要设备的名称，中继器（Repeater，也叫放大器）和集线器</p>
+<p>More info: <a href="https://baike.baidu.com/item/%E7%89%A9%E7%90%86%E5%B1%82/4329158?fr=aladdin">物理层</a></p>
+<hr>
+<h3 id="数据链路层（Data-Link-Layer）"><a href="#数据链路层（Data-Link-Layer）" class="headerlink" title="数据链路层（Data Link Layer）"></a>数据链路层（Data Link Layer）</h3><p>数据链路层在物理层提供的服务的基础上向网络层提供服务，其中最基本的服务是将源自网络层来的数<br>据可靠地传输到相邻节点的目标网络层。为达到这一目的，数据链路必须具备一系列相应的功能，主要有：如何将数据组合成数据块，在数据链路层中称这种数据块为帧（frame）,帧是数据链路层的传送<br>单位；如何控制帧在物理信道上的传输，包括如何传输差错，如何调节发送频率以使与接受方相匹配；以及在两个网络实体之间提供数据链路通路的建立，维持和释放的管理。数据链路层在不可靠的物理介质上提供可靠的传输。该层的作用包括：物理地址寻找，数据的成帧，流量控制，数据的检错，重发等。</p>
+<p>More info: <a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82">数据链路层</a></p>
+<hr>
+<h3 id="网络层（Network-Layer）"><a href="#网络层（Network-Layer）" class="headerlink" title="网络层（Network Layer）"></a>网络层（Network Layer）</h3><p>网络层的目的是实现两个端系统之间的数据透明传送，具体功能包括寻址和路由选择，连接的建立，保持和终止等。他提供的服务使传输层不需要了解网络中的数据传输和交换技术。如果您想用尽量少的词来记住网络层，那就是“路径选择，路由及逻辑寻址”。<br>网络层中涉及众多的协议，其中包括最重要的协议，也就是TCP/IP的协议–IP协议。IP协议非常简单，仅仅提供不可靠，无连接的传送服务。IP协议的主要功能有：无连接数据包传输，数据包路由选择和差错控制。与IP协议配套使用现实其功能的还有地址解析协议ARP，逆地址解析协议RARP，因特网报文协议ICMP。</p>
+<p>More info: <a href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%B1%82/16523988">网络层</a></p>
+<hr>
+<h3 id="传输层（Transport-Layer）"><a href="#传输层（Transport-Layer）" class="headerlink" title="传输层（Transport Layer）"></a>传输层（Transport Layer）</h3><p>第一个端到端，即主机到主机的层次。传输层负责将上层数据分段并提供端到端的，可靠的或不可靠的传输。此外，传输层还要处理端到端的差错控制和流量控制问题。<br>传输层的任务是根据通信子网的特性，最佳的利用网络资源，为两个端系统的会话层之间，提供建立，维护和取消传输连接的功能，负责端到端的可靠数据传输。在这一层，信息传送的协议数据单元称为段或报文。<br>网络层只是根据网络地址将源结点发出的数据包传送到目的结点，而传输层则负责将数据可靠的传送到相应的端口。</p>
+<p>More info: <a href="https://baike.baidu.com/item/%E4%BC%A0%E8%BE%93%E5%B1%82/4329536?fr=aladdin">传输层</a></p>
+<hr>
+<h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><p> 会话层管理主机之间的会话进程，即负责建立，管理，终止进程之间的会话。会话层还利用在数据中插入校验点来实现数据的同步。</p>
+<p>More info: <a href="https://baike.baidu.com/item/%E4%BC%9A%E8%AF%9D%E5%B1%82">会话层</a></p>
+<hr>
+<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><p> 表示层对上层数据或信息进行交换以保证一个主机应用层信息可以被另一个主机的应用程序理解。表示层的数据转换包括数据的加密，压缩，格式转换等。</p>
+<p>More info: <a href="https://baike.baidu.com/item/%E8%A1%A8%E7%A4%BA%E5%B1%82">表示层</a></p>
+<hr>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>为操作系统或网络应用程序提供访问服务的接口</p>
+<p>More info: <a href="https://baike.baidu.com/item/%E5%BA%94%E7%94%A8%E5%B1%82/16412033">应用层</a></p>
+]]></content>
+  </entry>
 </search>
