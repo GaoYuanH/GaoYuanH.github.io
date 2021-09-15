@@ -1,39 +1,308 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="google-site-verification" content="TZE0rZyIqLl10trYu3BWBWa1Vmz6HFwhb2OcNEK4u-s" />
-     <link rel="shortcut icon" href= /img/favicon.ico >
-    <title>
-        DA
-    </title>
-    <meta name="description" content= 嘿，我是刘训灼～这是我的子站，用于展示写的Hexo主题：Coder。欢迎访问！ >
-    <meta name="keywords" content= Blog,Hexo,Theme,刘训灼,LiuXunzhuo >
-    
-<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
-
-    
-<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-
-    
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="6fea7fc7276fc383ec5b2080c662f076"/>
+  <!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  -->
+  
+  <title>Linux命令 | DA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(后续会继续更新)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令">
+<meta property="og:url" content="http://example.com/2021/09/08/Linux%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="DA">
+<meta property="og:description" content="(后续会继续更新)">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-09-08T12:38:56.581Z">
+<meta property="article:modified_time" content="2021-09-08T14:35:15.357Z">
+<meta property="article:author" content="gyh">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="DA" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
 <link rel="stylesheet" href="/css/style.css">
 
+  <script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-1.8.1.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/ug-theme-default.js"></script>
+  <script src="/js/unitegallery.js"></script>
+  <script src="/js/av.min.js"></script>
+  <script src="/js/valine.min.js"></script>
 <meta name="generator" content="Hexo 5.4.0"></head>
-<body id="bodyx">
-    <div class="hd posts">
-    <a href="/index.html"><i class="fa fa-home
- replay-btn" aria-hidden="true"></i></a>
-    <div class="post-title">
-        <p>
-            Linux命令
-        </p>
-        <hr>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="img/222.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/" class="alluraregular"></a></h1>
+		</hgroup>
+        <!--
+		
+        -->
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/categories/front">总结</a></li>
+				        
+							<li><a href="/categories/work">工作日志</a></li>
+				        
+							<li><a href="/resume">关于我</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/gaoyuanh" title="github">github</a>
+					        
+						</div>
+					</nav>
+				</section>
+
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+
+				
+
+				
+			</div>
+		</div>
+	</header>
+</div>
+
     </div>
-    <div class="post-content">
-        <p>(后续会继续更新)</p>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="img/222.jpg" class="js-avatar">
+				<hgroup>
+				  <h1 class="header-author"></h1>
+				</hgroup>
+			</div>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/categories/front">总结</a></li>
+		        
+					<li><a href="/categories/work">工作日志</a></li>
+		        
+					<li><a href="/resume">关于我</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/gaoyuanh" title="github">github</a>
+			        
+				</div>
+			</nav>
+		</header>
+	</div>
+</nav>
+
+	  <div class="page-header" style="">
+	<!--是否开启站内搜索-->
+	
+	<span class="local-search local-search-google local-search-plugin" style="float:right;">
+  <input type="search" placeholder="Search..." id="local-search-input" class="local-search-input-cls" style="">
+  <!--<i class="icon" aria-hidden="true" title="Search"></i>-->
+  <div id="local-search-result" class="local-search-result-cls"></div>
+</span>
+
+<script>
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+	
+	
+	if(isMobile.any()){
+	    //手机端取消搜索功能
+		$('.local-search').css("display","none");
+	}
+	
+	$(".local-search").on('input porpertychange',function(){
+		
+		//searchFunc("/search.xml", 'local-search-input', 'local-search-result');
+		
+	});
+    
+    if ($('.local-search').size() && !isMobile.any()) {
+        searchFunc("/search.xml", 'local-search-input', 'local-search-result');
+    }
+	
+</script>
+
+	
+	<!--是否开启最近通知-->
+	
+	🍁砰砰在左边,你在砰砰里...
+
+
+	
+</div>
+
+      <div class="body-wrap"><article id="post-Linux命令" class="article article-type-post" itemscope itemprop="blogPost">
+    <script>
+        $("html").niceScroll({
+            cursorcolor: "#2a2929",
+            cursoropacitymax: 1,
+            touchbehavior: false,
+            cursorwidth: "6px",
+            cursorborder: "5",
+            cursorborderradius: "0px",
+            autohidemode: true
+        });
+    </script>
+    
+    <div class="article-meta">
+        <a href="/2021/09/08/Linux%E5%91%BD%E4%BB%A4/" class="article-date">
+  	<time datetime="2021-09-08T12:38:56.581Z" itemprop="datePublished">2021-09-08</time>
+</a>
+
+    </div>
+    
+    <div class="article-inner">
+        
+        <input type="hidden" class="isFancy" />
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      Linux命令
+    </h1>
+  
+
+
+        </header>
+        
+        <div class="article-info article-info-post">
+            
+
+            
+
+            <div class="clearfix"></div>
+        </div>
+        
+        
+
+        <div class="article-entry" itemprop="articleBody">
+
+            
+
+            <p class="toc-button" id="toc-button">目录</p>
+<div id="toc" class="toc-article" style="display:none;">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#find-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%8F%82%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">find 基本语法参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ls-%E5%91%BD%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text">ls 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cd-%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="toc-number">3.</span> <span class="toc-text">cd 命令：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cp-%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text">cp 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rm%E5%91%BD%E4%BB%A4%E4%BD%9C%E7%94%A8%E4%B8%BA%E5%88%A0%E9%99%A4"><span class="toc-number">5.</span> <span class="toc-text">rm命令作用为删除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mv%E5%91%BD%E4%BB%A4%E4%BD%9C%E7%94%A8%E4%B8%BA%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">mv命令作用为移动文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pwd%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BD%9C%E7%94%A8%E4%B8%BA%E6%9F%A5%E7%9C%8B%E2%80%9D%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E2%80%9C%E7%9A%84%E5%AE%8C%E6%95%B4%E8%B7%AF%E5%BE%84"><span class="toc-number">7.</span> <span class="toc-text">pwd命令，作用为查看”当前工作目录“的完整路径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tar%E5%91%BD%E4%BB%A4%EF%BC%8C%E7%94%A8%E4%BA%8E%E5%8E%8B%E7%BC%A9%E8%A7%A3%E5%8E%8B"><span class="toc-number">8.</span> <span class="toc-text">tar命令，用于压缩解压</span></a></li></ol>
+</div>
+<script>
+    $(function(){
+
+        var width = document.body.scrollWidth;
+        if (width <=550) {
+             $(".toc-button").css("display","none");
+        }
+        $(".toc-button").hover(function(){
+            var top = $(this).get(0).offsetTop-$(".toc-article").height()/2;
+            $(".toc-article").css({
+                top:top +"px"
+            });
+            $("#toc").show(1000,function(){});
+           // $("#toc").animate({width:500;},3000);
+        },function(){
+
+        });
+        $(".toc-article").hover(function(){
+
+        },function(){
+            $("#toc").hide(1000,function(){});
+        });
+    })
+</script>
+
+            
+            
+
+            
+            <p>(后续会继续更新)</p>
 <span id="more"></span>
 <h2 id="find-基本语法参数"><a href="#find-基本语法参数" class="headerlink" title="find 基本语法参数"></a>find 基本语法参数</h2><p>1.与时间有关的参数</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；</span><br><span class="line">-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；</span><br><span class="line">-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；</span><br><span class="line">-newer file : 列出比file还要新的文件名 </span><br></pre></td></tr></table></figure>
@@ -59,58 +328,196 @@
 <h2 id="tar命令，用于压缩解压"><a href="#tar命令，用于压缩解压" class="headerlink" title="tar命令，用于压缩解压"></a>tar命令，用于压缩解压</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-c ：新建打包文件</span><br><span class="line">-t ：查看打包文件的内容含有哪些文件名</span><br><span class="line">-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中</span><br><span class="line">-j ：通过bzip2的支持进行压缩/解压缩</span><br><span class="line">-z ：通过gzip的支持进行压缩/解压缩</span><br><span class="line">-v ：在压缩/解压缩过程中，将正在处理的文件名显示出来</span><br><span class="line">-f filename ：filename为要处理的文件</span><br><span class="line">-C dir ：指定压缩/解压缩的目录dir</span><br></pre></td></tr></table></figure>
 <hr>
 
+            
+            </br>
+            <p>本文链接：
+                <a href="http://example.com/2021/09/08/Linux%E5%91%BD%E4%BB%A4/">
+                    http://example.com/2021/09/08/Linux%E5%91%BD%E4%BB%A4/
+                </a>
+            </p>
+            
+            <p>-- <acronym title="End of File">EOF</acronym> --</p>
+
+            <div class="post-info">
+
+                <p>转载请注明出处 署名-非商业性使用-禁止演绎 3.0 国际（CC BY-NC-ND 3.0）</p>
+            </div>
+            
+        </div>
+
+        
     </div>
-
     
-        <hr class="fhr">
-        <div id="vcomments"></div>
+        <div id="socialShare" style="margin-left:40px;display:none;">
+</div>
+<script>
+    $(function () {
+        var width = document.body.scrollWidth;
+        if (width > 550) {
+            $("#socialShare").css("display", "block");
+            $("#socialShare").socialShare({
+                content: 'Nice!不错的资源...',
+                url: window.location.href,
+                titile: ''
+            });
+        }
+    });
+</script>
     
+    
+        
+            <div class="donateContainer">
+    <div>如果文章对您有用请随意打赏，谢谢支持！</div>
+    <span id="donate" class="donate" onclick="donate()">打赏</span>
+    <div id="QR" style="display: none;">
+
+        <div id="alipay" style="display: inline-block">
+            <a target="_blank" href="http://kiritor.github.io/img/weixin.jpg" class="fancybox fancybox.image" rel="group noopener">
+                <img id="alipay_qr" src="http://kiritor.github.io/img/weixin.JPG">
+            </a>
+
+        </div>
+        <div id="wechat" style="display: inline-block">
+            <a target="_blank" href="http://kiritor.github.io/img/zhifubao.jpg" class="fancybox fancybox.image" rel="group noopener">
+                <img id="wechat_qr" src="http://kiritor.github.io/img/zhifubao.JPG">
+            </a>
+
+        </div>
+    </div>
+    <script>
+        function donate() {
+            var qr = document.getElementById('QR');
+            if (qr.style.display === 'none') {
+                qr.style.display = 'block';
+            } else {
+                qr.style.display = 'none'
+            }
+
+        };
+    </script>
 </div>
-    <div class="footer" id="footer">
-    <p><h4>Copyright © 2020 | Author: gaoyuanhao | Theme By <a class="theme-author" target="_blank" rel="noopener" href="https://github.com/Xunzhuo/hexo-theme-coder" style="font-size:14px; color: #969696">Coder</a></h4>
-    <label class="el-switch el-switch-blue el-switch-sm" style="vertical-align: sub;">
-        <input type="checkbox" name="switch" id="update_style">
-        <span class="el-switch-style"></span>
-    </label>
-    <!--         <script type="text/javascript">
-    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
-    document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
-    </script> -->
-</p>
+        
+    
+    
+        
+<nav id="article-nav">
+  
+  
+    <a href="/2021/09/06/gaoyuanh/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gyh</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+        
+            
+                <div id="vcomments" style="margin: auto 30px auto 30px;"></div>
+<script>
+    new Valine({
+        av: AV,
+        el: '#vcomments',
+        appId: 'lxxWlIzQxwQ6sYeozabbQN2e-gzGzoHsz',
+        appKey: 'PQ3KTORxjUaJf9oRo5dfXmUr',
+        placeholder: '快来说点什么吧!',
+        emoticon_url: 'https://cloud.panjunwen.com/alu',
+        emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+        notify: false,
+        verify: false
+    })
+</script>
+            
+        
+    
+
+</article>
+
+
+<script>
+    var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() ||
+                isMobile.Windows());
+        }
+    };
+    if (isMobile.any()) {
+        //移动端不显示目录和评论
+        $("#toc-button").css("display", "none");
+        $("#commentDiv").css("display", "none");
+    }
+</script>
 </div>
-<input type="hidden" id="web_style" value="light">
-<input type="hidden" id="valine_appid" value="NOsswOncKgc8HOxqo9oxIWlX-gzGzoHsz">
-<input type="hidden" id="valine_appKey" value="z1FihjWEbS8uIfUQdmCtK7zz">
+      <!--
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2021 gyh
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/kiritor/hexo-theme-yilia-l" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  <script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
-<script src="/libs/jquery.min.js"></script>
+  _st('install','m5RW4BUQrJ_r-CYKAksH','2.0.0');
+</script>
+  </div>
+</footer>
+-->
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/libs/highlight/highlight.pack.js"></script>
 
-<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
 
-<script src="/js/js.js"></script>
+<script src="/js/mobile.js"></script>
 
-<style type="text/css">
-.v * {
-color: #698fca;
-}
-.v .vlist .vcard .vhead .vsys {
-color: #3a3e4a;
-}
-.v .vlist .vcard .vh .vmeta .vat {
-color: #638fd5;
-}
-.v .vlist .vcard .vhead .vnick {
-color: #6ba1ff;
-}
-.v a {
-color: #8696b1;
-}
-.v .vlist .vcard .vhead .vnick:hover {
-color: #669bfc;
-}
-</style>
-    <script type="text/javascript" color="173,174,173" opacity='1' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+<script src="/js/prefixfree.js"></script>
+
+
+
+
+
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;z-index:9999;opacity: 100%;">
+    <a title="返回顶部" style="opacity: 100%;">
+        <img src="/img/scrollup.png" />
+    </a>
+</div>
+
+<script src="/js/totop.js"></script>
+<script src="/js/share.js"></script>
+
+  </div>
 </body>
 </html>
